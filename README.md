@@ -30,4 +30,16 @@ yarn dev
 ```
 
 - 기본 포트는 `http://localhost:5173/`입니다.
-# bigs-frontend-task
+
+### 사용 기술 및 스택
+
+- Typescript(Javascript), React-Query, Tailwind
+
+### 구현 내용
+
+- 사용자 회원가입
+- 로그인
+- 리프레시 토큰 로그인
+- 토큰을 디코딩하여 사용자 아이디 및 이름 표시
+- 글 등록,수정,삭제
+- 게시물 조회 (페이지네이션)
