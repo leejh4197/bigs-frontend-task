@@ -10,7 +10,7 @@ const useEditBoard = () => {
     mutationFn: ({ id, formData }: { id: number; formData: FormData }) =>
       EditBoardItem(id, formData),
     retry: false,
-    onSuccess: (data, variables) => {
+    onSuccess: (_data, variables) => {
       alert("수정완료!");
       navigate(`/board/${variables.id}`);
     },
