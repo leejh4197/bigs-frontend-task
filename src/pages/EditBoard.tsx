@@ -25,7 +25,7 @@ const EditBoard = () => {
     }
 
     if (BoardDetail?.imageUrl) {
-      setPreviewImg(`https://front-mission.bigs.or.kr${BoardDetail.imageUrl}`);
+      setPreviewImg(`${import.meta.env.VITE_BASE_URL}${BoardDetail.imageUrl}`);
     }
   }, [BoardDetail]);
 
@@ -39,6 +39,7 @@ const EditBoard = () => {
             title: title,
             content: content,
             category: cate,
+            imageUrl: !img && previewImg ? previewImg : undefined,
           }),
         ],
         { type: "application/json" }
@@ -47,7 +48,7 @@ const EditBoard = () => {
 
     if (img) {
       formData.append("file", img);
-    } else {
+    } else if (!previewImg) {
       try {
         const defaultImageResponse = await fetch("/noImg.png");
         const defaultImageBlob = await defaultImageResponse.blob();
@@ -60,6 +61,7 @@ const EditBoard = () => {
       }
     }
 
+    // 수정 요청 전송
     EditBoard({ id: Number(id), formData });
   };
 

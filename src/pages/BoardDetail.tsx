@@ -56,7 +56,7 @@ const BoardDetail = () => {
         {BoardDetail?.imageUrl && (
           <div className="w-full flex justify-center mb-5">
             <img
-              src={`https://front-mission.bigs.or.kr${BoardDetail?.imageUrl}`}
+              src={`${import.meta.env.VITE_BASE_URL}${BoardDetail?.imageUrl}`}
               alt="게시물 이미지"
               className="max-w-full h-auto rounded-lg shadow-md"
             />
