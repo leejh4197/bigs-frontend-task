@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/leejh4197/bigs-frontend-task.git
-cd bigs-task
+cd bigs-frontend-task
 ```
 
 ### 2. **패키지 설치 (Install Dependencies)**
